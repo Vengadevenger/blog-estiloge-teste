@@ -192,7 +192,9 @@
   padding: 12px 20px;
   color: var(--p-preto);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 20px; /* menu do ge: 20px, peso leve */
+  font-weight: 400;
+  line-height: 1.2;
   border-bottom: 1px solid var(--p-cinza-fundo);
 }
 
@@ -312,8 +314,8 @@
 
 .portal-destaque-titulo {
   color: var(--p-branco);
-  font-size: 26px;
-  font-weight: 800;
+  font-size: 40px; /* manchete do ge: 40px/700 */
+  font-weight: 700;
   line-height: 1.2;
   margin: 0;
 }
@@ -369,12 +371,14 @@
   object-fit: cover;
 }
 
+/* Tamanhos medidos no ge.globo (estilos computados, jul/2026) */
 .portal-feed-chapeu {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   text-transform: lowercase;
   color: var(--p-preto);
   margin: 0 0 4px;
+  line-height: 1.2;
 }
 
 .portal-feed-headline {
@@ -383,9 +387,9 @@
 
 .portal-feed-headline a {
   color: var(--p-azul);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   text-decoration: none;
 }
 
@@ -396,7 +400,7 @@
   gap: 8px;
   font-size: 14px;
   color: var(--p-verde);
-  font-weight: 600;
+  font-weight: 400;
   margin: 0 0 10px;
 }
 
@@ -526,17 +530,17 @@
 
 .portal-artigo-chapeu:hover { text-decoration: underline; }
 
+/* Artigo — tamanhos medidos no ge.globo: h1 56/700, deck 20/400, corpo 16 */
 .portal-artigo h1 {
   font-size: 56px;
-  font-weight: 800;
-  line-height: 1.12;
+  font-weight: 700;
+  line-height: 1.2;
   color: var(--p-preto);
   margin: 0 0 12px;
-  letter-spacing: -0.01em;
 }
 
 .portal-artigo-deck {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--p-cinza-texto);
   line-height: 1.5;
   margin: 0 0 20px;
@@ -553,7 +557,7 @@
   flex-wrap: wrap;
 }
 
-.portal-artigo-byline-info { font-size: 13px; color: var(--p-cinza-texto); }
+.portal-artigo-byline-info { font-size: 16px; color: var(--p-cinza-texto); }
 .portal-artigo-byline-info strong { color: var(--p-preto); }
 .portal-artigo-byline-info p { margin: 0 0 2px; }
 
@@ -588,7 +592,7 @@
 .portal-resumo summary {
   padding: 14px 16px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -598,31 +602,31 @@
 
 .portal-resumo summary::after { content: "▾"; color: var(--p-cinza-texto); }
 .portal-resumo[open] summary::after { content: "▴"; }
-.portal-resumo p { padding: 0 16px 14px; margin: 0; font-size: 15px; color: #333; line-height: 1.6; }
+.portal-resumo p { padding: 0 16px 14px; margin: 0; font-size: 16px; color: #333; line-height: 1.5; }
 
 /* Hero */
 .portal-artigo-hero { margin: 0 0 28px; }
 .portal-artigo-hero img { width: 100%; height: auto; border-radius: 4px; display: block; }
 
 .portal-artigo-hero figcaption {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--p-cinza-texto);
   padding-top: 6px;
 }
 
 /* Corpo do texto */
-.portal-artigo-corpo { font-size: 18px; line-height: 1.7; color: #222; }
+.portal-artigo-corpo { font-size: 16px; line-height: 1.5; color: #222; }
 .portal-artigo-corpo p { margin: 0 0 20px; }
 
 .portal-artigo-corpo h2 {
-  font-size: 26px;
-  font-weight: 800;
+  font-size: 24px;
+  font-weight: 700;
   color: var(--p-preto);
   margin: 32px 0 12px;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
-.portal-artigo-corpo h3 { font-size: 21px; margin: 28px 0 10px; }
+.portal-artigo-corpo h3 { font-size: 20px; margin: 28px 0 10px; }
 
 .portal-artigo-corpo a {
   color: var(--p-verde);
@@ -903,7 +907,7 @@
   .portal-corpo { grid-template-columns: 1fr; }
   .portal-mosaico { grid-template-columns: 1fr; }
   .portal-destaque { min-height: 260px; }
-  .portal-artigo h1 { font-size: 40px; }
+  .portal-artigo h1 { font-size: 32px; }
   .portal-vejatambem-grid { grid-template-columns: 1fr; }
 }
 
@@ -912,7 +916,7 @@
   .portal-logo { position: static; transform: none; margin: 0 auto; }
   .portal-logo-img { height: 42px; }
   .portal-feed-item { grid-template-columns: 1fr; gap: 10px; }
-  .portal-feed-headline a { font-size: 19px; }
-  .portal-destaque-titulo { font-size: 21px; }
+  .portal-feed-headline a { font-size: 20px; }
+  .portal-destaque-titulo { font-size: 28px; }
   .portal-cta { padding: 8px 12px; font-size: 12px; }
 }
