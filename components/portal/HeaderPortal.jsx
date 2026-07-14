@@ -35,8 +35,12 @@ export default function HeaderPortal({ categories = [] }) {
             MENU
           </button>
 
-          <Link href="/blog" className="portal-logo">
-            ⚽ Cola<em>Bola</em>
+          <Link href="/blog" className="portal-logo" aria-label="Cola Bola — ir para a página inicial do blog">
+            <img
+              src="/images/marca/logo-header.svg"
+              alt="Cola Bola"
+              className="portal-logo-img"
+            />
           </Link>
 
           <div className="portal-header-right">
@@ -61,7 +65,11 @@ export default function HeaderPortal({ categories = [] }) {
           <div className="portal-drawer-overlay" onClick={() => setAberto(false)} />
           <aside className="portal-drawer" aria-label="Menu principal">
             <div className="portal-drawer-header">
-              <span>⚽ Cola Bola</span>
+              <img
+                src="/images/marca/logo-header.svg"
+                alt="Cola Bola"
+                className="portal-logo-img portal-logo-img-drawer"
+              />
               <button type="button" onClick={() => setAberto(false)} aria-label="Fechar menu">
                 ✕
               </button>

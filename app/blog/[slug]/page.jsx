@@ -9,6 +9,7 @@ import {
   formatPostDate,
 } from "@/lib/blog-data";
 import ShareButtons from "@/components/blog/ShareButtons";
+import CTABanner from "@/components/blog/CTABanner";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://colabola.com.br";
 
@@ -119,11 +120,7 @@ export default async function BlogPostPage({ params }) {
       {/* Conteúdo controlado pela equipe Cola Bola (hoje mock, futuramente Notion) */}
       <div className="portal-artigo-corpo" dangerouslySetInnerHTML={{ __html: post.content }} />
 
-      <div className="portal-artigo-cta">
-        <h3>Bola furada de novo?</h3>
-        <p>Consertar em casa é mais rápido e mais barato do que comprar outra.</p>
-        <Link href="/comprar">Compre Cola Bola</Link>
-      </div>
+      <CTABanner />
 
       {relatedPosts.length > 0 && (
         <section className="portal-vejatambem">

@@ -6,7 +6,11 @@ export default function FooterPortal({ categories = [] }) {
     <footer className="portal-footer">
       <div className="portal-footer-inner">
         <div className="portal-footer-marca">
-          ⚽ Cola<em>Bola</em>
+          <img
+            src="/images/marca/logo-header.svg"
+            alt="Cola Bola"
+            className="portal-footer-logo"
+          />
           <p>Conserto de bolas esportivas em casa, em menos de 2 minutos.</p>
         </div>
         <nav aria-label="Links do rodapé">
