@@ -20,10 +20,8 @@
 .portal { background: var(--p-branco); min-height: 100vh; display: flex; flex-direction: column; }
 .portal > main { flex: 1; }
 
-/* Header e topbar mantêm a fonte do site; o resto do portal usa Open Sans
-   (aplicada via next/font no layout) */
-.portal-topbar,
-.portal-header { font-family: Roboto, Arial, sans-serif; }
+/* Todo o portal usa Open Sans (aplicada via next/font no layout),
+   como o ge — header e topbar herdam a mesma fonte */
 
 /* ---------- Faixa superior ---------- */
 .portal-topbar {
