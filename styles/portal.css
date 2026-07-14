@@ -63,6 +63,7 @@
 }
 
 .portal-menu-btn {
+  font-family: inherit; /* button não herda fonte por padrão */
   background: none;
   border: none;
   color: var(--p-branco);
@@ -113,6 +114,7 @@
 }
 
 .portal-busca input {
+  font-family: inherit; /* input não herda fonte por padrão */
   background: transparent;
   border: none;
   color: var(--p-branco);
