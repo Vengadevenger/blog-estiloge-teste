@@ -16,7 +16,7 @@ export default function HeaderPortal({ categories = [] }) {
         <div className="portal-topbar-inner">
           <Link href="/">colabola.com.br</Link>
           <Link href="/blog">blog</Link>
-          <Link href="/comprar">compre cola bola</Link>
+          <Link href="/comprar">Saiba Mais</Link>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ export default function HeaderPortal({ categories = [] }) {
               </button>
             </form>
             <Link href="/comprar" className="portal-cta">
-              Saiba Mais
+              Compre Cola Bola
             </Link>
           </div>
         </div>
