@@ -100,7 +100,7 @@ export function SidebarPortal({ maisLidos, categories }) {
       <div className="portal-widget portal-widget-cta">
         <h3>Bola furada?</h3>
         <p>Conserte em casa em menos de 2 minutos, sem borracharia.</p>
-        <Link href="/comprar">Compre Cola Bola</Link>
+        <Link href="/comprar">Saiba Mais</Link>
       </div>
 
       <div className="portal-widget">
