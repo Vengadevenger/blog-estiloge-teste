@@ -54,7 +54,7 @@ export default function HeaderPortal({ categories = [] }) {
               </button>
             </form>
             <Link href="/comprar" className="portal-cta">
-              Compre Cola Bola
+              Saiba Mais
             </Link>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function HeaderPortal({ categories = [] }) {
                 </Link>
               ))}
               <p className="portal-drawer-titulo">Produto</p>
-              <Link href="/comprar" onClick={() => setAberto(false)}>compre cola bola</Link>
+              <Link href="/comprar" onClick={() => setAberto(false)}>Saiba Mais</Link>
             </nav>
           </aside>
         </>
