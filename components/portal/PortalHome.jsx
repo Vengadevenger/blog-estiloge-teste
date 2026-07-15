@@ -98,7 +98,6 @@ export function SidebarPortal({ maisLidos, categories }) {
       </div>
 
       <Link href="/comprar" className="portal-ad" aria-label="Cola Bola — conserte bolas furadas em minutos. Saiba mais.">
-        <span className="portal-ad-rotulo">PUBLICIDADE</span>
         <span className="portal-ad-quadro">
           <span className="portal-ad-marca">
             COLA
@@ -120,6 +119,20 @@ export function SidebarPortal({ maisLidos, categories }) {
           />
           <span className="portal-ad-tagline">
             conserte bolas furadas em <em>minutos</em>
+          </span>
+          <span className="portal-ad-btn">
+            Saiba Mais
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
           </span>
           <span className="portal-ad-legal">USO EXCLUSIVO PARA BOLAS ESPORTIVAS.</span>
         </span>

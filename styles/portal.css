@@ -467,24 +467,6 @@
   text-decoration: none;
 }
 
-.portal-ad-rotulo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 10px;
-  letter-spacing: 1px;
-  color: #8a919a;
-  margin-bottom: 10px;
-}
-
-.portal-ad-rotulo::before,
-.portal-ad-rotulo::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #c7ccd2;
-}
-
 .portal-ad-quadro {
   display: flex;
   flex-direction: column;
@@ -530,6 +512,25 @@
   font-style: italic;
   font-weight: 700;
 }
+
+.portal-ad-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #2be37a, #0eae55);
+  color: var(--p-branco);
+  font-family: var(--fonte-portal, inherit);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px 26px;
+  border-radius: 10px;
+  box-shadow: 0 10px 22px -6px rgba(20, 196, 102, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 0.15s ease;
+}
+
+.portal-ad-btn svg { width: 15px; height: 15px; }
+
+.portal-ad:hover .portal-ad-btn { transform: translateY(-2px); }
 
 .portal-ad-legal {
   border: 1px solid #a9b1ba;
