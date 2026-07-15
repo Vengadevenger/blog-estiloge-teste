@@ -97,11 +97,33 @@ export function SidebarPortal({ maisLidos, categories }) {
         </ol>
       </div>
 
-      <div className="portal-widget portal-widget-cta">
-        <h3>Bola furada?</h3>
-        <p>Conserte em casa em menos de 2 minutos, sem borracharia.</p>
-        <Link href="/comprar">Saiba Mais</Link>
-      </div>
+      <Link href="/comprar" className="portal-ad" aria-label="Cola Bola — conserte bolas furadas em minutos. Saiba mais.">
+        <span className="portal-ad-rotulo">PUBLICIDADE</span>
+        <span className="portal-ad-quadro">
+          <span className="portal-ad-marca">
+            COLA
+            <Image
+              src="/images/marca/logo-bola-escura.png"
+              alt=""
+              width={120}
+              height={120}
+              className="portal-ad-marca-bola"
+            />
+            BOLA
+          </span>
+          <Image
+            src="/images/marca/frasco-cola-bola.png"
+            alt="Frasco de Cola Bola"
+            width={320}
+            height={340}
+            className="portal-ad-frasco"
+          />
+          <span className="portal-ad-tagline">
+            conserte bolas furadas em <em>minutos</em>
+          </span>
+          <span className="portal-ad-legal">USO EXCLUSIVO PARA BOLAS ESPORTIVAS.</span>
+        </span>
+      </Link>
 
       <div className="portal-widget">
         <h3 className="portal-widget-titulo">Seções</h3>

@@ -1,15 +1,24 @@
 import "@/styles/blog.css";
 import "@/styles/portal.css";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Playfair_Display } from "next/font/google";
 import { getAllCategories } from "@/lib/blog-data";
 import HeaderPortal from "@/components/portal/HeaderPortal";
 import FooterPortal from "@/components/portal/FooterPortal";
 
-// Fonte do corpo do portal (header e topbar mantêm a fonte do site via CSS)
+// Fonte do portal inteiro, como o ge
 const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "600", "700", "800"],
   display: "swap",
+});
+
+// Serifa do anúncio editorial da sidebar (via variável CSS --fonte-serif)
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--fonte-serif",
 });
 
 export const metadata = {
@@ -29,7 +38,7 @@ export default function BlogLayout({ children }) {
   const categories = getAllCategories();
 
   return (
-    <div className={`portal ${openSans.className}`}>
+    <div className={`portal ${openSans.className} ${playfair.variable}`}>
       <HeaderPortal categories={categories} />
       <main>{children}</main>
       <FooterPortal categories={categories} />
