@@ -17,6 +17,13 @@
   --p-largura: 1280px;
 }
 
+/* padding conta dentro da largura — sem isso, .portal-main (100% + 32px de
+   padding) estoura a tela no mobile e header/footer "encolhem" à direita */
+.portal,
+.portal *,
+.portal *::before,
+.portal *::after { box-sizing: border-box; }
+
 .portal { background: var(--p-branco); min-height: 100vh; display: flex; flex-direction: column; }
 .portal > main { flex: 1; }
 
