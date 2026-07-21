@@ -105,17 +105,19 @@ export default async function BlogPostPage({ params }) {
         <p>{post.excerpt}</p>
       </details>
 
-      <figure className="portal-artigo-hero">
-        <Image
-          src={heroImage}
-          alt={post.title}
-          width={800}
-          height={400}
-          priority
-          unoptimized={heroImage.endsWith(".svg")}
-        />
-        <figcaption>{post.title}</figcaption>
-      </figure>
+      {heroImage && (
+        <figure className="portal-artigo-hero">
+          <Image
+            src={heroImage}
+            alt={post.title}
+            width={800}
+            height={400}
+            priority
+            unoptimized={heroImage.endsWith(".svg")}
+          />
+          <figcaption>{post.title}</figcaption>
+        </figure>
+      )}
 
       {/* Conteúdo controlado pela equipe Cola Bola (hoje mock, futuramente Notion) */}
       <div className="portal-artigo-corpo" dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -128,13 +130,15 @@ export default async function BlogPostPage({ params }) {
           <div className="portal-vejatambem-grid">
             {relatedPosts.map((rel) => (
               <Link key={rel.slug} href={`/blog/${rel.slug}`} className="portal-vejatambem-card">
-                <Image
-                  src={rel.image}
-                  alt={rel.title}
-                  width={300}
-                  height={200}
-                  unoptimized={rel.image.endsWith(".svg")}
-                />
+                {rel.image && (
+                  <Image
+                    src={rel.image}
+                    alt={rel.title}
+                    width={300}
+                    height={200}
+                    unoptimized={rel.image.endsWith(".svg")}
+                  />
+                )}
                 <span>{rel.category}</span>
                 <strong>{rel.title}</strong>
               </Link>

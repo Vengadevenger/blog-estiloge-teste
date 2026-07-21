@@ -30,23 +30,32 @@ export function DestaquesMosaico({ posts }) {
   if (posts.length < 1) return null;
   return (
     <div className="portal-mosaico">
-      {posts.map((post) => (
-        <Link key={post.slug} href={`/blog/${post.slug}`} className="portal-destaque">
-          <Image
-            src={post.heroImage || post.image}
-            alt={post.title}
-            width={640}
-            height={360}
-            priority
-            unoptimized={(post.heroImage || post.image).endsWith(".svg")}
-          />
+      {posts.map((post) => {
+        const capa = post.heroImage || post.image;
+        return (
+        <Link
+          key={post.slug}
+          href={`/blog/${post.slug}`}
+          className={`portal-destaque${capa ? "" : " portal-destaque--sem-img"}`}
+        >
+          {capa && (
+            <Image
+              src={capa}
+              alt={post.title}
+              width={640}
+              height={360}
+              priority
+              unoptimized={capa.endsWith(".svg")}
+            />
+          )}
           <div className="portal-destaque-conteudo">
             <span className="portal-destaque-chapeu">{post.category}</span>
             <h2 className="portal-destaque-titulo">{post.title}</h2>
             <p className="portal-destaque-sub">{post.excerpt}</p>
           </div>
         </Link>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -54,16 +63,18 @@ export function DestaquesMosaico({ posts }) {
 /** Card horizontal do feed: imagem à esquerda, chapéu, título e meta. */
 export function FeedItem({ post }) {
   return (
-    <article className="portal-feed-item">
-      <Link href={`/blog/${post.slug}`} className="portal-feed-img">
-        <Image
-          src={post.image}
-          alt={post.title}
-          width={300}
-          height={200}
-          unoptimized={post.image.endsWith(".svg")}
-        />
-      </Link>
+    <article className={`portal-feed-item${post.image ? "" : " portal-feed-item--sem-img"}`}>
+      {post.image && (
+        <Link href={`/blog/${post.slug}`} className="portal-feed-img">
+          <Image
+            src={post.image}
+            alt={post.title}
+            width={300}
+            height={200}
+            unoptimized={post.image.endsWith(".svg")}
+          />
+        </Link>
+      )}
       <div>
         <p className="portal-feed-chapeu">{post.category.toLowerCase()}</p>
         <h2 className="portal-feed-headline">

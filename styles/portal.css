@@ -289,6 +289,11 @@
   background: var(--p-preto);
 }
 
+/* destaque sem imagem: fundo azul da marca no lugar da foto */
+.portal-destaque--sem-img {
+  background: linear-gradient(150deg, var(--p-azul) 0%, var(--p-azul-escuro) 100%);
+}
+
 .portal-destaque img {
   position: absolute;
   inset: 0;
@@ -363,6 +368,9 @@
   padding: 20px 0;
   border-bottom: 1px solid var(--p-borda);
 }
+
+/* post sem imagem: texto ocupa a largura toda */
+.portal-feed-item--sem-img { grid-template-columns: 1fr; }
 
 .portal-feed-img {
   border-radius: 4px;
